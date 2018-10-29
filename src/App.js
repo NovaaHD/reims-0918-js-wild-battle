@@ -19,11 +19,12 @@ class App extends Component {
         <Header />
         <Container fluid>
           <Switch>
-            <Route exact path="/" component={HomeNav} />
+            {/* <Route exact path="/" component={HomeNav} /> */}
             <Route path="/Help" component={Help} />
             <Route path="/Battle" component={BattleScene} />
             <Route path="/HeroesListing" component={HeroesListing} />
             <Route path="/Stats" component={StatsSection} />
+            <Route exact path={"/"} component={HomeNav} />
           </Switch>
         </Container>
         <Footer />
