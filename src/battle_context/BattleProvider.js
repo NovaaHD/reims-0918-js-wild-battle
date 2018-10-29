@@ -109,7 +109,7 @@ class BattleProvider extends Component {
 
   callApiSuperHeroes() {
     for (let i = 0; i < listHeroes.length; i++) {
-      fetch(`http://superheroapi.com/api.php/2368931693133321/${listHeroes[i]}`)
+      fetch(`https://cors-anywhere.herokuapp.com/http://superheroapi.com/api.php/2368931693133321/${listHeroes[i]}`)
         .then(results => results.json()) // conversion du résultat en JSON
         .then(data => {
           data.used = false;
