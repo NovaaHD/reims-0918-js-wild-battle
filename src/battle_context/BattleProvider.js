@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import BattleContext from "./BattleContext";
 
-import firebase from "../firebase"
+import firebase from "firebase/app";
 
 import getRandomNumber from "./getRandomNumber";
 
@@ -109,7 +109,11 @@ class BattleProvider extends Component {
 
   callApiSuperHeroes() {
     for (let i = 0; i < listHeroes.length; i++) {
-      fetch(`http://superheroapi.com/api.php/2368931693133321/${listHeroes[i]}`)
+      fetch(
+        `https://cors-anywhere.herokuapp.com/http://superheroapi.com/api.php/2368931693133321/${
+          listHeroes[i]
+        }`
+      )
         .then(results => results.json()) // conversion du résultat en JSON
         .then(data => {
           data.used = false;
@@ -123,9 +127,14 @@ class BattleProvider extends Component {
     }
   }
 
+  componentDidMount() {
+    this.callApiSuperHeroes();
+    this.getStorage();
+  }
+
   getStorage() {
-    const itemsRef = firebase.database().ref('history');
-    itemsRef.on('value', (snapshot) => {
+    const itemsRef = firebase.database().ref("history");
+    itemsRef.on("value", snapshot => {
       let items = snapshot.val();
       let newState = [];
       for (let item in items) {
@@ -140,10 +149,6 @@ class BattleProvider extends Component {
         history: newState
       });
     });
-  }
-  componentDidMount() {
-    this.callApiSuperHeroes();
-    this.getStorage();
   }
 
   render() {
@@ -337,12 +342,12 @@ class BattleProvider extends Component {
               loser: loser,
               date: gameDisplayDate
             };
-            const itemsRef = firebase.database().ref('history');
+            const itemsRef = firebase.database().ref("history");
 
             itemsRef.push(getMatchData);
             this.setState({
-              currentItem: '',
-              username: ''
+              currentItem: "",
+              username: ""
             });
           }
         }}
