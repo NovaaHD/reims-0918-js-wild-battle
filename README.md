@@ -1,37 +1,13 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/NovaaHD/reims-0918-js-wild-battle/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+# Wild-battle
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Pitch
 
-### Markdown
+The **Wild Battle** is a WebApp programmed in **React**. You can play with your favourite Hero in a **"Card Game"**. It's a turn by turn game and for each round you have to pick a card. Your choice must take into account the "Random Stat". Indeed at the beginning of a round, a stat is draw by lot to determined with which stat heroes will **fight**. For instance, if the Strength is choosen, and if your card have a better strength stat than your opponent's, you win the round, and after 3 win, you **win the match**.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Dev Team
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/NovaaHD/reims-0918-js-wild-battle/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+- Bourmeau Michaël
+- Coyard Florentin
+- Raymond Fabien
+- Thomas Mathieu
