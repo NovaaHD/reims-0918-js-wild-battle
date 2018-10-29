@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/reims-0918-js-wild-battle/precache-manifest.cd9d2b46126c5edf253a977e2e205712.js"
+  "/reims-0918-js-wild-battle/precache-manifest.d10d3cb2b19e5f8601cf021797994dfc.js"
 );
 
 workbox.clientsClaim();
